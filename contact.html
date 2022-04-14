@@ -21,6 +21,7 @@
     <title>Contact Me</title>
 </head>
 <body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
     <header>
         <nav>
             <ul class = "nav_links">
@@ -35,44 +36,51 @@
     </header>
 
     <main>
-        <p id="contact_text">Thank you for checking out my page! Feel free to contact me about anything in the form below.</p>
-        <div">
-            <div>
-                <form action="https://formspree.io/f/mjvloojl" method="POST">
-                    <label>
-                        Name:
-                        <input type="text" name="name" placeholder="Enter your name:">
-                    </label>
-                    <br>
-                    <br>
-                    <label>
-                        Email:
-                        <input type="email" name="email" placeholder="Enter your email:">
-                    </label>
-                    <br>
-                    <br>
-                    <label>
-                        Phone Number:
-                        <input type="tel" name="number" placeholder="Enter your phone number:">
-                    </label>
-                    <br>
-                    <br>
-                    <label>
-                        Your message:
-                        <textarea name="message" placeholder="Message, Question, Inquiry?"></textarea>
-                    </label>
-                <!-- your other form fields go here -->
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-            <div>
-                <img id="contact_image" src="images/headshot.jpeg" alt="Headshot">
+        <div class="flex_container">
+            <div class="flip-card">
+                <a href="#" aria-label="Enables tab accessibility for flip card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/headshot.jpeg"  id="contact_image" alt="Headshot">
+                    </div>
+                </a>
+                <div class="flip-card-back">
+                    <div class="form">
+                        <form action="https://formspree.io/f/mjvloojl" method="POST">
+                            <label>
+                                Name:
+                                <input type="text" name="name" placeholder="Enter your name:">
+                            </label>
+                            <br>
+                            <br>
+                            <label>
+                                Email:
+                                <input type="email" name="email" placeholder="Enter your email:">
+                            </label>
+                            <br>
+                            <br>
+                            <label>
+                                Phone Number:
+                                <input type="tel" name="number" placeholder="Enter your phone number:">
+                            </label>
+                            <br>
+                            <br>
+                            <label>
+                                Your message:
+                                <textarea name="message" placeholder="Message, Question, Inquiry?"></textarea>
+                            </label>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+        <p id="contact_text">Thank you for checking out my page! Feel free to contact me about anything in the form below.</p>
+        
         
     </main>
 
-    <footer>
+    <footer id="contact_foot">
         <p>Ryan Simon &copy; 2022</p>
     </footer>
 </body>

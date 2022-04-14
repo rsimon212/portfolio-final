@@ -56,8 +56,23 @@ h1:hover {
     }
 }
 
-@media (prefers-reduced-motion) {
+.intro {
+    background-image: url('../images/throwingrockinwater.jpg');
+    min-height: 400px;
+    background-color: #707070;
+    
+    background-attachment: fixed;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
     h1 {
+        animation: none;
+    }
+    .flip-card {
         animation: none;
     }
 }
@@ -71,8 +86,8 @@ footer{
 
 .nav_links {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 a:visited {
@@ -82,11 +97,12 @@ a:visited {
 .active{
     background-color: rgb(119, 189, 235);
     font-weight: bold;
-    border: 2px solid black; 
+    border: 2px solid black;
+    font-style: italic;
 }
 
 img{
-    width: 125px;
+    width: 300px;
     margin: 18px 18px;
     padding: 5px;
     border: 4px solid blue;
@@ -130,22 +146,9 @@ nav li{
     justify-content: space-around;   
 }
 
-#contact_text {
-    width: 700px;
-    margin-left: 10px;
-}
-
-#contact_image {
-    width: 400px;
-    position: relative;
-    padding: 0px;
-    border: 0px solid;
-    border-radius: 0px;
-}
-
 .container1 {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
 }
 
 
@@ -156,7 +159,7 @@ nav li{
 }
 
 .setSecondMichPic {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 2 / 3;
     justify-self: center;
 }
@@ -168,7 +171,7 @@ nav li{
 }
 
 .setFourthMichPic {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 4 / 5;
     justify-self: center;
 }
@@ -180,7 +183,7 @@ nav li{
 }
 
 .setSixthMichPic {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 6 / 7;
     justify-self: center;
 }
@@ -192,20 +195,142 @@ nav li{
 }
 
 .setEighthMichPic {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
     grid-row: 8 / 9;
     justify-self: center;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 500px) {
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    .setFirstMichPic {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2 ;
+        justify-self: center;
+    }
+    
+    .setSecondMichPic {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+    
+    .setThirdMichPic {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        justify-self: center;
+    }
+    
+    .setFourthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        justify-self: center;
+    }
+    
+    .setFifthMichPic {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        justify-self: center;
+    }
+    
+    .setSixthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+        justify-self: center;
+    }
+    
+    .setSeventhMichPic {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+        justify-self: center;
+    }
+    
+    .setEighthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 8 / 9;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
     img {
-        width: 280px;
+        width: 400px;
+    }
+
+    .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    .setFirstMichPic {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2 ;
+        justify-self: center;
+    }
+    
+    .setSecondMichPic {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+    
+    .setThirdMichPic {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        justify-self: center;
+    }
+    
+    .setFourthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        justify-self: center;
+    }
+    
+    .setFifthMichPic {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+        justify-self: center;
+    }
+    
+    .setSixthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+        justify-self: center;
+    }
+    
+    .setSeventhMichPic {
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+        justify-self: center;
+    }
+    
+    .setEighthMichPic {
+        grid-column: 2 / 3;
+        grid-row: 8 / 9;
+        justify-self: center;
     }
 
     main p {
         margin-left: 100px;
         margin-right: 100px;
     }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
 }
 
 #button_text {
@@ -215,4 +340,77 @@ nav li{
 
 #hidden_until_button_click {
     display: none;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    border: 0px;
+    perspective: 1000px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner, .flip-card:active {
+    transform: rotateY(180deg);
+}
+
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: black;
+    background: repeating-linear-gradient(
+  45deg,
+  #606dbc,
+  #606dbc 10px,
+  #465298 10px,
+  #465298 20px
+);
+    color: black;
+}
+
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#contact_text {
+    text-align: center;
+    font-size: 20px;
+}
+
+#contact_image {
+    text-align: center;
+    width: 350px;
+    border: 0;
+    border-radius: 0;
+    background-color: none;
+}
+
+#contact_foot {
+    padding-top: 150px;
 }
